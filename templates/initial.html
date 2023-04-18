@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>GPT Maps</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <h1 class="text-center mt-5 mb-4">GPT Maps</h1>
+                <form id="input-form">
+                    <div class="form-group">
+                        <h2 >Create a map from a prompt</h2>
+                        <label for="user-input">Examples:</label><br>
+                        <label for="user-input">Show me the top things to do in Paris</label><br>
+                        <label for="user-input">Show me the 5 tallest mountains in the world</label><br>
+                        <label for="user-input">Plan me a roadtrip from London to Edinburgh</label><br>
+                        <textarea class="form-control" id="user-input" name="user-input" rows="3" placeholder="Enter your prompt here"></textarea>
+                    </div>
+                    <button id="initial-request" type="submit" class="btn btn-primary btn-block">Generate Map</button>
+                    <div id="loading" style="display: none;">Generating map...</div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script type='text/javascript' src='https://www.bing.com/api/maps/mapcontrol?callback=loadMapScenario' async defer></script>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script src="/static/js/main.js"></script>
+    <title>Map Visualization</title>
+    <script>
+        const bingApiKey = "{{ bing_api_key }}";
+    </script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-6">
+                <h1 class="text-center mt-5 mb-4">Map description</h1>
+                <form id="description-form">
+                    <div class="form-group">
+                        <textarea class="form-control" id="description" name="description" rows="25"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block" id="plot-coordinates">Plot Coordinates</button>
+                    <button type="submit" class="btn btn-secondary btn-block" id="home-button">Home</button>
+                </form>
+                <div id="plotting" style="display: none;">Plotting coordinates...</div>
+            </div>
+            <div class="col-md-6">
+                <div id="map-container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
